@@ -7,7 +7,7 @@ const ContextCart = () => {
 
     // const [item, setItem] = useState(products);
 
-    const item = useContext(CartContext);
+    const {item} = useContext(CartContext);
 
     return (
         <div>

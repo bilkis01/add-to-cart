@@ -2,25 +2,35 @@ import React, { createContext, useReducer } from 'react';
 import './Cart.css'
 import ContextCart from './ContextCart';
 import { products } from './Products';
-import { reducer } from 'react';
+import { reducer } from './reducer';
 
 
 export const CartContext = createContext();
 
-const initialState ={
+const initialState = {
     item: products,
-    totalAmount:0,
-    totalItem:0,
+    totalAmount: 0,
+    totalItem: 0,
 }
 
 const Cart = () => {
 
     // const [item,setItem] = useState(products);
 
-    const [state, dispatch]= useReducer(reducer,initialState)
+    const [state, dispatch] = useReducer(reducer, initialState);
+
+    // remove item
+    const removeItem = (id)=>{
+        console.log(id);
+        return dispatch({
+            type: "REMOVE_ITEM",
+            payload: id,
+        })
+
+    }
 
     return (
-        <CartContext.Provider value={products}>
+        <CartContext.Provider value={{...state, removeItem} } >
             <ContextCart></ContextCart>
         </CartContext.Provider>
     );

@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from './Cart';
 
-const Items = ({title,description,img,price,quantity}) => {
+const Items = ({id,title,description,img,price,quantity}) => {
+
+    const {removeItem} = useContext(CartContext);
     return (
         <>
             <div className="items-info">
@@ -20,7 +23,7 @@ const Items = ({title,description,img,price,quantity}) => {
                         <h3>{price} tk  </h3>
                     </div>
                     <div className="remove-item">
-                    <i class="fa-solid fa-trash-can remove"></i>
+                    <i class="fa-solid fa-trash-can remove" onClick={()=>removeItem(id)}></i>
                     </div>
                 </div>
                 <hr />
