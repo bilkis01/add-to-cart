@@ -17,7 +17,7 @@ const Items = ({title,description,img,price,quantity}) => {
                     <i class="fa-solid fa-plus add"></i>
                     </div>
                     <div className="price">
-                        <h3>{price} tk </h3>
+                        <h3>{price} tk  </h3>
                     </div>
                     <div className="remove-item">
                     <i class="fa-solid fa-trash-can remove"></i>
