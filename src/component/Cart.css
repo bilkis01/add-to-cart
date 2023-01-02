@@ -54,12 +54,12 @@ header {
 }
 
 .continue-shopping .arrow-icon {
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .continue-shopping h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: capitalize;
   color: var(--main-color);
   margin-left: 1.5rem;
@@ -76,22 +76,22 @@ header {
 }
 
 .cart-icon img {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   color: #2f80ed;
 }
 
 .cart-icon p {
   position: absolute;
-  width: 4rem;
-  height: 4rem;
+  width: 3.4rem;
+  height: 3.4rem;
   right: -1.2rem;
-  top: 0.9rem;
+  top: 1rem;
   border-radius: 50%;
   background: #99cbf7;
   color: #fff;
   box-sizing: border-box;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,7 +101,7 @@ header {
 .main-cart-section h1 {
   font-style: normal;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: capitalize;
   color: rgba(41, 41, 41, 1);
   margin-bottom: 1rem;
@@ -110,7 +110,7 @@ header {
 .main-cart-section .total-items {
   font-style: normal;
   font-weight: normal;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   text-transform: capitalize;
   color: var(--main-color);
   margin-bottom: 5rem;
@@ -147,6 +147,7 @@ header {
 .cart-items-container {
   width: 90%;
   height: 56rem;
+  overflow-Y: scroll;
 }
 
 .items-info {
