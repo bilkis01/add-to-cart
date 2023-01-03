@@ -20,7 +20,7 @@ const Cart = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     // remove item
-    const removeItem = (id)=>{
+    const removeItem = (id) => {
         console.log(id);
         return dispatch({
             type: "REMOVE_ITEM",
@@ -29,8 +29,16 @@ const Cart = () => {
 
     }
 
+    // clear all cart
+
+    const clearCart = () => {
+        return dispatch({
+            type: "CLEAR_CART"
+        })
+    }
+
     return (
-        <CartContext.Provider value={{...state, removeItem} } >
+        <CartContext.Provider value={{ ...state, removeItem, clearCart }} >
             <ContextCart></ContextCart>
         </CartContext.Provider>
     );

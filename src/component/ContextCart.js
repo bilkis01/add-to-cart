@@ -7,7 +7,30 @@ const ContextCart = () => {
 
     // const [item, setItem] = useState(products);
 
-    const {item} = useContext(CartContext);
+    const { item, clearCart } = useContext(CartContext);
+
+    if (item.length === 0) {
+        return (
+            <>
+                <header>
+                    <div className="continue-shopping">
+                        <img src="./images/arrow.png" alt="arrow" className="arrow-icon" />
+                        <h3>Continue Shopping</h3>
+                    </div>
+
+                    <div className="cart-icon">
+                        <img src="./images/cart.png" alt="cart" />
+                        <p>0</p>
+                    </div>
+                </header>
+
+                <section className="main-cart-section">
+                    <h1>Shopping Cart</h1>
+                    <p className='total-items'>You have <span className='total-items-count'>0</span> items in shopping cart</p>
+                </section>
+            </>
+        )
+    };
 
     return (
         <div>
@@ -44,6 +67,7 @@ const ContextCart = () => {
                 <div className="card-total">
                     <h3>Cart Total :  <span> 22000 tk </span></h3>
                     <button>Checkout</button>
+                    <button className="clear-cart" onClick={clearCart}> Clear Cart</button>
                 </div>
             </section>
 
