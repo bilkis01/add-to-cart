@@ -12,6 +12,8 @@ const ContextCart = () => {
     if (item.length === 0) {
         return (
             <>
+
+
                 <header>
                     <div className="continue-shopping">
                         <img src="./images/arrow.png" alt="arrow" className="arrow-icon" />
@@ -29,8 +31,10 @@ const ContextCart = () => {
                     <p className='total-items'>You have <span className='total-items-count'>0</span> items in shopping cart</p>
                 </section>
             </>
+
+
         )
-    };
+    }
 
     return (
         <div>
