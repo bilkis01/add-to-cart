@@ -2,7 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Project name : add to cart using ReactJs
+## Hooks : useEffect , UseReducer, Context API , useState
+
+## Live Link: https://ornate-hotteok-86ee84.netlify.app/
 
 In the project directory, you can run:
 
